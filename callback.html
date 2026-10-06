@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Snap OAuth</title></head>
+<body>
+  <pre id="out"></pre>
+  <script>
+    const p = new URLSearchParams(location.search);
+    document.getElementById('out').textContent =
+      'code=' + (p.get('code') || '(none)') + '\nstate=' + (p.get('state') || '');
+  </script>
+</body>
+</html>
